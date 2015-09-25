@@ -1,0 +1,22 @@
+<h1>Sign In</h1>
+<div ng-show="attendance.length">
+    <li ng-repeat="item in filtered = (attendance | filter: here = 'false')">
+        <div class="form-group">
+            <form ng-submit="AttendanceFactory.markHere(item.name, item.id)" class="form-inline" role="form">
+                {{ item.name }}<input type="submit" value="Sign In">
+            </form>
+        </div>
+    </li>
+</div>
+
+
+<h1>Sign Out</h1>
+
+<div ng-show="attendance.length">
+    <li ng-repeat="item in filtered =(attendance | filter: here = 'true')">
+        <div class="form-group">
+            <form ng-submit="AttendanceFactory.markNotHere(item.name, item.id)" class="form-inline" role="form">
+        {{ item.name }}<input type="submit" value="Sign Out"> 
+
+    </li>
+</div>

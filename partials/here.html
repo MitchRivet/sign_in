@@ -1,7 +1,14 @@
-<h1>Whatup</h1>
+<h1>Here</h1>
 
 <div ng-show="attendance.length">
-    <li ng-repeat="item in attendance">
+    <li ng-repeat="item in filtered =(attendance | filter: here = 'true')">
+        {{ item.name }}
+    </li>
+</div>
+
+<h1>Not Here</h1>
+<div ng-show="attendance.length">
+    <li ng-repeat="item in filtered = (attendance | filter: here = 'false')">
         {{ item.name }}
     </li>
 </div>

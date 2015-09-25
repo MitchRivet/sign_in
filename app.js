@@ -7,14 +7,17 @@ signIn.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "partials/home.html"
     });
 
-    $stateProvider.state('here', { 
+    $stateProvider.state('here', {
         url: "/here",
         templateUrl: "partials/here.html",
         controller: 'AttendanceCtrl'
     });
-    //
-    // $stateprovider.state( {
-    //
-    // })
+
+    $stateProvider.state('signin', {
+        url: "/signin",
+        templateUrl: "partials/signin.html",
+        controller: 'AttendanceCtrl'
+
+    });
 
 });
